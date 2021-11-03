@@ -109,4 +109,10 @@ node_modules
 dist
 .vercel
 .env
->>>>>>> first commit
+.wenv
+
+HEAD
+config
+description
+hooks/
+info/

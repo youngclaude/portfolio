@@ -1,0 +1,35 @@
+[33mcommit 16cb6e6161b893dfad06c6fba82d2172b3ebb46c[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: youngclaude <clauderene@ymail.com>
+Date:   Wed Nov 3 19:07:21 2021 -0400
+
+    test 2
+
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mindex 658ff9c..a075a05 100644[m
+[1m--- a/.gitignore[m
+[1m+++ b/.gitignore[m
+[36m@@ -2,4 +2,10 @@[m [mnode_modules[m
+ .next[m
+ dist[m
+ .vercel[m
+[31m-.env[m
+[32m+[m[32m.wenv[m
+[32m+[m
+[32m+[m[32mHEAD[m
+[32m+[m[32mconfig[m
+[32m+[m[32mdescription[m
+[32m+[m[32mhooks/[m
+[32m+[m[32minfo/[m
+[1mdiff --git a/pages/index.js b/pages/index.js[m
+[1mindex 742eedb..c3f64a6 100644[m
+[1m--- a/pages/index.js[m
+[1m+++ b/pages/index.js[m
+[36m@@ -57,7 +57,7 @@[m [mconst Page = () => {[m
+         <Section>[m
+             <Heading as="h3" variant="section-title">I {useColorModeValue('🖤', '❤')} </Heading>[m
+             <Paragraph>[m
+[31m-                Art, Music, Drawing, playing Drums, Photography, Lecia, Machine Learning[m
+[32m+[m[32m                Art, Music, Drawing, playing Drums, Photography, Lecia, Machine Learning...[m
+             </Paragraph>[m
+         </Section>[m
+ [m
