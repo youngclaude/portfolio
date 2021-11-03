@@ -57,7 +57,7 @@ const Page = () => {
         <Section>
             <Heading as="h3" variant="section-title">I {useColorModeValue('🖤', '❤')} </Heading>
             <Paragraph>
-                Art, Music, Drawing, playing Drums, Photography, Lecia, Machine Learning
+                Art, Music, Drawing, playing Drums, Photography, Lecia, Machine Learning...
             </Paragraph>
         </Section>
 

@@ -2,4 +2,10 @@ node_modules
 .next
 dist
 .vercel
-.env
+.wenv
+
+HEAD
+config
+description
+hooks/
+info/
