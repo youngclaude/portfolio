@@ -13,7 +13,7 @@ import {
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/Bio'
 import Paragraph from '../components/Paragraph'
-import Section from '../components/section'
+import Section from '../components/Section'
 import NextLink from 'next/link'
 import Layout from '../components/layouts/article'
 import {
