@@ -1,5 +1,4 @@
-import styled from "@emotion/styled";
-
+import styled from '@emotion/styled'
 
 // import {
 //     Container,
@@ -9,20 +8,9 @@ import styled from "@emotion/styled";
 //     useColorModeValue
 // } from '@chakra-ui/react'
 
-
 const Paragraph = styled.p`
-text-align: justify;
-text-indent: 1em
+  text-align: justify;
+  text-indent: 1em;
 `
 
-export default Paragraph;
-
-
-
-
-
-
-
-
-
-
+export default Paragraph
