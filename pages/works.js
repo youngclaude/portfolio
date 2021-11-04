@@ -11,7 +11,7 @@ import thumbStyly from '../public/images/works/styly_eyecatch.png'
 import thumbMenkiki from '../public/images/works/menkiki_eyecatch.png'
 import Layout from '../components/layouts/article'
 
-import Section from '../components/section'
+import Section from '../components/Section'
 
 import Image from 'next/image'
 import NextLink from 'next/link'

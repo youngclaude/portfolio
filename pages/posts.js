@@ -1,6 +1,6 @@
 import { Container, Heading, SimpleGrid } from '@chakra-ui/layout'
 import Layout from '../components/layouts/article'
-import Section from '../components/section'
+import Section from '../components/Section'
 import { GridItem } from '../components/grit-item'
 
 import thumbMyDeskSetup from '../public/images/content/youtube-my-desk-setup.jpg'
