@@ -5,7 +5,7 @@ import Navbar from '../Navbar'
 import VoxelDog from '../voxel-dog'
 import NoSSR from '../no-ssr'
 
-const Main = ({ children, router }) => {
+const MainLayout = ({ children, router }) => {
   return (
     <Box as="main" pb={8}>
       <Head>
@@ -23,4 +23,4 @@ const Main = ({ children, router }) => {
   )
 }
 
-export default Main
+export default MainLayout

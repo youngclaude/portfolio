@@ -5,11 +5,11 @@ import {
   Heading,
   SimpleGrid,
 } from '@chakra-ui/react'
-// import { WorkGridItem, GridItem } from '../components/grit-item'
-import thumbInkdrop from '../public/images/works/inkdrop-banner.jpg'
-import thumbStyly from '../public/images/works/styly_eyecatch.png'
-import thumbMenkiki from '../public/images/works/menkiki_eyecatch.png'
-import Layout from '../components/layouts/article'
+// import { PortfolioGridItem, GridItem } from '../components/grit-item'
+import thumbInkdrop from '../public/images/portfolio/common-commands-v1.png'
+import thumbStyly from '../public/images/portfolio/styly_eyecatch.png'
+import thumbMenkiki from '../public/images/portfolio/menkiki_eyecatch.png'
+import ArticleLayout from '../components/layouts/article'
 
 import Section from '../components/Section'
 
@@ -36,9 +36,9 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
   </Box>
 )
 
-export const WorkGridItem = ({ children, id, title, thumbnail }) => (
+export const PortfolioGridItem = ({ children, slug, title, thumbnail }) => (
   <Box w="100%" align="center">
-    <NextLink href={`/works/${id}`}>
+    <NextLink href={`/portfolio/${slug}`}>
       <LinkBox cursor="pointer">
         <Image
           src={thumbnail}
@@ -46,7 +46,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
           className="grid-item-thumbnail"
           placeholder="blur"
         />
-        <LinkOverlay href={`/works/${id}`}>
+        <LinkOverlay href={`/portfolio/${slug}`}>
           <Text mt={2} fontSize={20}>
             {title}
           </Text>
@@ -67,35 +67,40 @@ export const GridItemStyle = () => (
   />
 )
 
-const works = () => {
+const portfolio = () => {
   return (
-    <Layout>
+    <ArticleLayout>
       <Container>
         <Heading as="h3" fontSize={20} mb={4}>
-          Works Page
+          Portfolio Page
         </Heading>
 
         <SimpleGrid column={[1, 1, 2]} gap={6}>
           <Section>
-            <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
+            <PortfolioGridItem slug="common-commands" title="Common Commands" thumbnail={thumbInkdrop}>
+              A resource for the most commonly used commands
+            </PortfolioGridItem>
+          </Section>
+          <Section>
+            <PortfolioGridItem slug="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
               A markdown note-taking app
-            </WorkGridItem>
+            </PortfolioGridItem>
           </Section>
           <Section>
-            <WorkGridItem id="styly" title="Styly" thumbnail={thumbStyly}>
+            <PortfolioGridItem slug="styly" title="Styly" thumbnail={thumbStyly}>
               Vr shopping app for adults and kids alike.
-            </WorkGridItem>
+            </PortfolioGridItem>
           </Section>
           <Section>
-            <WorkGridItem id="menkiki" title="Menkiki" thumbnail={thumbMenkiki}>
+            <PortfolioGridItem slug="menkiki" title="Menkiki" thumbnail={thumbMenkiki}>
               On demand soup bowl orders for college students in the city of
               Osaka
-            </WorkGridItem>
+            </PortfolioGridItem>
           </Section>
         </SimpleGrid>
       </Container>
-    </Layout>
+    </ArticleLayout>
   )
 }
 
-export default works
+export default portfolio

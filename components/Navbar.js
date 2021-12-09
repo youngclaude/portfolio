@@ -1,5 +1,3 @@
-// import Logo from './layouts/Logo'
-// import {Logo} from './layouts/Logo'
 import NextLink from 'next/link'
 import {
   Container,
@@ -36,15 +34,19 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
+  // const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
+  // <img src="https://img.icons8.com/officel/16/000000/logo.png"/>
+
+  const iconImagePath = `${useColorModeValue('https://img.icons8.com/plumpy/16/000000/logo', 'https://img.icons8.com/officel/16/000000/logo')}.png`
+
 
   return (
     <Link href="/">
       <a>
         <LogoBox>
-          <Image src={footPrintImg} width={20} height={20} alt="logo"></Image>
+          <Image src={iconImagePath} width={20} height={20} alt="logo"></Image>
           <Text
-            color={useColorModeValue('grey.800', 'whiteAlpha.900')}
+            color={useColorModeValue('grey', 'whiteAlpha.900')}
             fontFamily="M PLUS Rounded 1c"
             fontWeight="bold"
             ml={3}
@@ -57,11 +59,11 @@ const Logo = () => {
   )
 }
 
-const LinkItem = ({ href, path, children }) => {
+const LinkItem = ({ href, path, children, ...rest }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('grey200', 'whiteAlpha900')
   return (
-    <NextLink href={href}>
+    <NextLink href={href} {...rest}>
       <Link
         p={2}
         bg={active ? 'glassTeal' : undefined}
@@ -107,15 +109,15 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/works" path={path}>
-            Works
+          <LinkItem href="/portfolio" path={path}>
+            Portfolio
           </LinkItem>
           <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem>
-          <LinkItem href="/github" path={path}>
+          <a href="https://www.github.com" >
             Github
-          </LinkItem>
+          </a>
         </Stack>
         <Box flex={1} align="right">
           <ThemeToggleButton />
@@ -129,9 +131,9 @@ const Navbar = props => {
               />
               <MenuList>
                 <MenuItem> <Link as={NextLink} href="/">Home</Link> </MenuItem>
-                <MenuItem> <Link to="/works" as={NextLink} href="/works">Work</Link> </MenuItem>
+                <MenuItem> <Link to="/portfolio" as={NextLink} href="/portfolio">Work</Link> </MenuItem>
                 <MenuItem> <Link to="/posts" as={NextLink} href="/posts"> Posts </Link> </MenuItem>
-                <MenuItem as={Link} href="https://github.com"> Github </MenuItem>
+                <MenuItem as={Link} href="https://www.github.com"> Github </MenuItem>
               </MenuList>
             </Menu>
           </Box>

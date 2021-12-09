@@ -15,16 +15,15 @@ import { BioSection, BioYear } from '../components/Bio'
 import Paragraph from '../components/Paragraph'
 import Section from '../components/Section'
 import NextLink from 'next/link'
-import Layout from '../components/layouts/article'
+import ArticleLayout from '../components/layouts/article'
 import {
   IoLogoGithub,
-  IoLogoTwitter,
-  IoLogoYoutube
+  IoLogoTwitter
 } from 'react-icons/io5'
 
 const Page = () => {
   return (
-    <Layout>
+    <ArticleLayout>
       <Container>
         <Box
           borderRadius="lg"
@@ -35,6 +34,7 @@ const Page = () => {
           color="white"
         >
           Hello, I am a full-stack developer based in Atlanta!
+          <br /> <small><i>Try grabbing, dragging or scrolling-in on the dog</i></small>
         </Box>
 
         <Box display={{ md: 'flex' }}>
@@ -42,7 +42,7 @@ const Page = () => {
             <Heading as="h2" variant="page-title">
               Rene Claude
             </Heading>
-            <p>Digital Craftzman (Artist / Developer/ Designer)</p>
+            <p>Software Architect / Developer/ Designer</p>
           </Box>
           <Box
             flexShrink={0}
@@ -67,18 +67,17 @@ const Page = () => {
             Work{' '}
           </Heading>
           <Paragraph>
-            Iz been workeen owlllll ma life - Charles J Frassier. Whats going on
-            my name is Rene and I work as a Sr. Software Engineer living all
-            over the US but in Atlanta, GA for now I enjoy long dive into
-            debugging code that should work the first time but that package team
-            just pushed and update with massive breakable changes and soothing
-            strools through Google or Stack Overflow to see if others are or
-            have suffered my same pain :) <br />
-            For fun I lift weight and do kickboxing. <br />
-            Currently learning {`&apos;`}blockchain{`&apos;`}
+             Whats going on my name is Rene and I work as a Sr. Software Engineer living all
+            over the US but in Atlanta, GA for now. I enjoy long dives into
+            debugging code that should work the first time ( but that a package team
+            just pushed an update with massive breakable changes) and soothing
+            strolls through Google or Stack Overflow to see if others are
+            have suffered my same pain :) <br /><br />
+            For fun I lift weights and do kickboxing. <br />
+            Currently learning blockchain 
           </Paragraph>
           <Box align="center" my={7}>
-            <NextLink href="/works">
+            <NextLink href="/portfolio">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                 My Portfolio
               </Button>
@@ -90,14 +89,22 @@ const Page = () => {
             Work{' '}
           </Heading>
           <BioSection>
-            <BioYear>1985</BioYear>Born in Osaka (表意文)
+            <BioYear>2021 to present</BioYear>Senior Software Engineer @ Fluke Technologies
           </BioSection>
           <BioSection>
-            <BioYear>2007</BioYear>Move to New York City
+            <BioYear>2021</BioYear>Achieved AWS Solutions Architect Certification
           </BioSection>
           <BioSection>
-            <BioYear>2020 to present</BioYear>Became coding master after
-            mastering myself
+            <BioYear>2020-2021</BioYear>Freelance Software Engineer/ Consultant <br />
+          </BioSection>
+          <BioSection>
+            <BioYear>2019-2020</BioYear>Software Developer @ You42 (Web3) <br />
+            The You42 platform launched with its own cryptocurrency, the U42 Token, an ERC20 consumer token issued and transacted on the Ethereum public blockchain. The ICO concluded in August 2018 with a raise of nearly $22M. The token is currently used to purchase advertising and promotions on the You42platform.</BioSection>
+          <BioSection>
+            <BioYear>2018</BioYear><span>SR Wordpress Dev @ Darwin&apos;s List Network (Advertising Agency)</span>
+          </BioSection>
+          <BioSection>
+            <BioYear>2013-2018</BioYear>Freelance PHP Wordpress Dev 
           </BioSection>
         </Section>
         <Section>
@@ -105,8 +112,7 @@ const Page = () => {
             I {useColorModeValue('🖤', '❤')}{' '}
           </Heading>
           <Paragraph>
-            Art, Music, Drawing, playing Drums, Photography, Lecia, Machine
-            Learning
+            Art, Music, Drawing, Singing, Photography, Cloud Computing
           </Paragraph>
         </Section>
 
@@ -120,12 +126,12 @@ const Page = () => {
                   leftIcon={<Icon as={IoLogoGithub} />}
                 >
                   {' '}
-                  @craftzdog{' '}
+                  @youngclaude{' '}
                 </Button>
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="https://twitter.com/youngclaude" target="_blank">
+              <Link href="https://twitter.com/youngclaude_" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
@@ -136,22 +142,10 @@ const Page = () => {
                 </Button>
               </Link>
             </ListItem>
-            <ListItem>
-              <Link href="https://youtube.com/youngclaude_" target="_blank">
-                <Button
-                  variant="ghost"
-                  colorScheme="teal"
-                  leftIcon={<Icon as={IoLogoYoutube} />}
-                >
-                  {' '}
-                  @youngclaude{' '}
-                </Button>
-              </Link>
-            </ListItem>
           </List>
         </Section>
       </Container>
-    </Layout>
+    </ArticleLayout>
   )
 }
 

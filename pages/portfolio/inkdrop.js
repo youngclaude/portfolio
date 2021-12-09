@@ -1,15 +1,15 @@
 import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
+import { Title, PortfolioImage, Meta } from '../../components/portfolio'
 import P from '../../components/Paragraph'
-import Layout from '../../components/layouts/article'
+import ArticleLayout from '../../components/layouts/article'
 
 const Work = () => {
   return (
-    <Layout title="Inkdrop">
+    <ArticleLayout title="Inkdrop">
       <Container>
         <Title>
-          Inkdrop <Badge>2016</Badge>
+          Inkdrop <Badge>2020</Badge>
         </Title>
         <P>
           A markdown note-taking app with 100 plugins, cross platform
@@ -39,16 +39,16 @@ const Work = () => {
           </ListItem>
         </List>
 
-        <WorkImage
-          src="https://raw.githubusercontent.com/craftzdog/craftzdog-homepage/master/public/images/works/inkdrop_01.png"
+        <PortfolioImage
+          src="https://raw.githubusercontent.com/craftzdog/craftzdog-homepage/master/public/images/portfolio/inkdrop_01.png"
           alt="Inkdrop"
         />
-        <WorkImage
-          src="https://raw.githubusercontent.com/craftzdog/craftzdog-homepage/master/public/images/works/inkdrop_02.png"
+        <PortfolioImage
+          src="https://raw.githubusercontent.com/craftzdog/craftzdog-homepage/master/public/images/portfolio/inkdrop_02.png"
           alt="Inkdrop"
         />
       </Container>
-    </Layout>
+    </ArticleLayout>
   )
 }
 
