@@ -34,7 +34,7 @@ const Work = () => {
           <ListItem>
             <Meta>Blogpost</Meta>
             <Link href="google.com">
-              How I{`&apos;`}ve attracted my first customers 500 Paid Users for My SaaS $5{`&lsquo;`}mo <ExternalLinkIcon mx="2px" />
+              How I&apos;ve attracted my first customers 500 Paid Users for My SaaS $5&lsquo;mo <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
         </List>

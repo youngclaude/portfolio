@@ -2,34 +2,18 @@ import React from 'react'
 import {
     Container,
     Box,
-    Link,
-    Stack,
     Heading,
-    Title,
-    Menu,
-    MenuItem,
-    MenuList,
-    MenuButton,
-    IconButton,
-    useColorModeValue,
-    SimpleGrid,
-    Divider
+    SimpleGrid
 } from '@chakra-ui/react'
-// import { WorkGridItem, GridItem } from '../components/grit-item'
 import thumbInkdrop from '../public/images/works/inkdrop-banner.jpg'
 import thumbStyly from '../public/images/works/styly_eyecatch.png'
 import thumbMenkiki from '../public/images/works/menkiki_eyecatch.png'
 import Layout from "../components/layouts/article";
-
-
-
 import Section from '../components/section'
-
 import Image from "next/image";
 import NextLink from "next/link";
 import { Text, LinkBox, LinkOverlay} from '@chakra-ui/react'
 import { Global } from "@emotion/react";
-
 
 
 export const GridItem = ({children, href, title, thumbnail}) => (

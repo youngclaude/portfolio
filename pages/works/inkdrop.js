@@ -27,7 +27,7 @@ const Work = () => {
                     </ListItem>
                     <ListItem>
                         <Meta>Blogpost</Meta>
-                        <Link href="google.com">How I've attracted my first customers 500 Paid Users for My SaaS $5/mo <ExternalLinkIcon mx="2px"/></Link>
+                        <Link href="google.com">How I&apos;ve attracted my first customers 500 Paid Users for My SaaS $5/mo <ExternalLinkIcon mx="2px"/></Link>
                     </ListItem>
 
                 </List>
