@@ -4,11 +4,12 @@ import {
   Box,
   Heading,
   SimpleGrid,
+  Divider
 } from '@chakra-ui/react'
 // import { PortfolioGridItem, GridItem } from '../components/grit-item'
 import thumbInkdrop from '../public/images/portfolio/common-commands-v1.png'
-import thumbStyly from '../public/images/portfolio/styly_eyecatch.png'
-import thumbMenkiki from '../public/images/portfolio/menkiki_eyecatch.png'
+// import thumbStyly from '../public/images/portfolio/styly_eyecatch.png'
+// import thumbMenkiki from '../public/images/portfolio/menkiki_eyecatch.png'
 import ArticleLayout from '../components/layouts/article'
 
 import Section from '../components/Section'
@@ -71,33 +72,56 @@ const portfolio = () => {
   return (
     <ArticleLayout>
       <Container>
-        <Heading as="h3" fontSize={20} mb={4}>
-          Portfolio Page
-        </Heading>
+        <div style={{textAlign: 'center'}}>
+          <Heading as="h3" fontSize={20} mb={4} >
+            Portfolio Page
+          </Heading>
+        </div>
+     
 
-        <SimpleGrid column={[1, 1, 2]} gap={6}>
+
+        <Section delay={0.2}>
+          <Divider my={6} />
+          <Heading as="h3" fontSize={20} mb={4}>
+            Personal Projects
+          </Heading>
+        </Section>
+        
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
             <PortfolioGridItem slug="common-commands" title="Common Commands" thumbnail={thumbInkdrop}>
               A resource for the most commonly used commands
-            </PortfolioGridItem>
+            </PortfolioGridItem> 
           </Section>
+        </SimpleGrid>
+
+
+        <Section delay={0.2}>
+          <Divider my={6} />
+
+          <Heading as="h3" fontSize={20} mb={4}>
+            Production Apps
+          </Heading>
+        </Section>
+        
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
-            <PortfolioGridItem slug="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
-              A markdown note-taking app
+            <PortfolioGridItem slug="you42" title="You42" thumbnail={thumbInkdrop}>
+              Blockchain app focused on getting consumers paid in crypto
             </PortfolioGridItem>
-          </Section>
+            </Section>
+
           <Section>
-            <PortfolioGridItem slug="styly" title="Styly" thumbnail={thumbStyly}>
-              Vr shopping app for adults and kids alike.
-            </PortfolioGridItem>
-          </Section>
-          <Section>
-            <PortfolioGridItem slug="menkiki" title="Menkiki" thumbnail={thumbMenkiki}>
-              On demand soup bowl orders for college students in the city of
-              Osaka
+
+            <PortfolioGridItem slug="fluke" title="Fluke | Baseline" thumbnail={thumbInkdrop}>
+              A resource for the most commonly used commands
             </PortfolioGridItem>
           </Section>
         </SimpleGrid>
+
+
+
+
       </Container>
     </ArticleLayout>
   )
